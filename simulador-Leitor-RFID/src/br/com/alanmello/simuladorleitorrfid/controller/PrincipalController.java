@@ -42,7 +42,6 @@ public class PrincipalController {
             }
             if (e.getActionCommand().equalsIgnoreCase(Constantes.JBparar)) {
                 getView().setAviso("Servidor parado...", Color.RED);
-
             }
         }
     }

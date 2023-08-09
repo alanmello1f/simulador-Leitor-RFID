@@ -17,6 +17,7 @@ public class PrincipalView extends javax.swing.JFrame {
 
     /**
      * Creates new form PrincipalView
+     * @param actionListener
      */
     public PrincipalView(ActionListener actionListener) {
         defineLookaFeed();
@@ -25,8 +26,6 @@ public class PrincipalView extends javax.swing.JFrame {
         JBiniciar.addActionListener(actionListener);
         JBlimpar.setText(Constantes.JBlimpar);
         JBlimpar.addActionListener(actionListener);
-//        JBparar.setText(Constantes.JBparar);
-//        JBparar.addActionListener(actionListener);
         this.setVisible(true);
     }
 
@@ -186,13 +185,7 @@ public class PrincipalView extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PrincipalView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     }
